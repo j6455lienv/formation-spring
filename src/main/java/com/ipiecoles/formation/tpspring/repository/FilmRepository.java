@@ -5,13 +5,16 @@ import java.util.List;
 
 import com.ipiecoles.formation.tpspring.model.Film;
 import com.ipiecoles.formation.tpspring.model.Type;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import static java.util.stream.Collectors.toList;
 
+@Repository //permet de remplacer le fichier xml
 public class FilmRepository {
 
     private List<Film> films = new ArrayList<>();
-
     {
         Film justiceLeague = new Film();
         justiceLeague.setTitre("Justice League");
